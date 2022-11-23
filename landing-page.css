@@ -48,4 +48,5 @@ div.branding{
     background-color: #1f2937;
     color: white;
     padding: 25px;
+    display: flex;
 }

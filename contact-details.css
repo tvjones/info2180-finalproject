@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+}
+
+div.branding {
+  background-color: #1f2937;
+  color: white;
+  padding: 25px;
+  display: flex;
+}
+
+
+aside {
+  background-color: white;
+  width: 15%;
+  min-height: 100vh;
+  padding-left: 15px;
+}
+
+
+aside > div{
+    display: flex;
+}
+
+aside > div img{
+    margin-top: 15px;
+}
+
+aside p {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+hr {
+  width: 90%;
+}
+
+main {
+  display: flex;
+}
+
+main > div {
+  padding: 20px 30px;
+}
+
+#intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+#intro :nth-child(1) {
+  display: flex;
+}
+
+#intro img{
+    margin-right: 30px;
+}
+
+#functions {
+  display: flex;
+  justify-content: space-between;
+  min-width: 20%;
+}
+
+#functions button {
+  border-radius: 5px;
+  height: 30px;
+}
+
+#functions :nth-child(1) {
+  background-color: #4ade80;
+}
+
+#functions :nth-child(2) {
+  background-color: #fbbf24;
+}
+
+#intro > div > div > p {
+  color: #b2b8c0;
+}
+
+#details {
+  margin-top: 100px;
+  border: 1px solid black;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  row-gap: 30px;
+  border-radius: 5px;
+}
+
+.email > p:nth-child(1),
+.telephone > p:nth-child(1),
+.company > p:nth-child(1),
+.assigned > p:nth-child(1) {
+  color: #65758b;
+  font-weight: bold;
+}
+
+.email {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.telephone {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.company {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.assigned {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#notes {
+  margin-top: 40px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#notes hr {
+  width: 100%;
+}
+
+div.note {
+  margin: 40px 0;
+}
+
+div.note p.comment,
+div.note p.date {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #65758b;
+}
+
+#add-note {
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+#add-note p {
+  font-weight: bold;
+}
+
+#add-note textarea {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+#add-note button{
+    background-color: #4f46e5;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+}

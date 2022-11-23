@@ -6,6 +6,7 @@ div.branding{
     background-color: #1f2937;
     color: white;
     padding: 25px;
+    display: flex;
 }
 
 body{
@@ -13,12 +14,22 @@ body{
     overflow-y: hidden;
 }
 
-aside{
+
+aside {
     background-color: white;
     width: 15%;
-    height: 100vh;
-}
-
+    min-height: 100vh;
+    padding-left: 15px;
+  }
+  
+  
+  aside > div{
+      display: flex;
+  }
+  
+  aside > div img{
+      margin-top: 15px;
+  }
 aside p{
     font-weight: bold;
     font-size: 20px;
