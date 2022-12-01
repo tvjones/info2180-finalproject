@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.branding{
+    background-color: #1f2937;
+    color: white;
+    padding: 25px;
+    display: flex;
+}
+
+body{
+    background-color: #f3f4f6;
+    /*overflow-y: hidden;*/
+}
+
+
+aside {
+    background-color: white;
+    width: 15%;
+    min-height: 100vh;
+    padding-left: 15px;
+  }
+  
+  
+  aside > div{
+      display: flex;
+  }
+  
+  aside > div img{
+      margin-top: 15px;
+  }
+aside p{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+hr{
+    width: 90%;
+}
+
+main{
+    display: flex;
+}
+
+div.input-item > label{
+    font-weight: bold;
+}
+
+.dashHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+#addContactButton{
+    display: flex;
+    background-color: rgb(101, 18, 173);
+    box-sizing: border-box;
+    height: 30px;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 3px;
+    color: white;
+
+    margin-top: 20px;
+}
+
+.tableContainer{
+    padding: 20px;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.filterRow{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filterRow > span{
+    padding: 0 10px;
+}
+
+.filterRow > .selected{
+    color: rgb(101, 18, 173);
+    text-decoration: underline;
+}
+
+.contactsTable{
+    background-color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(223, 231, 237);
+    border-radius: 5px;
+    border-spacing: 0;
+}
+
+th, td{
+    padding: 5px 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(223, 231, 237);
+}
+
+th{
+    background-color: #b8c2d1;
+}
+
+td{
+    color: grey;
+}
+
+.tableName{
+    color: black;
+    font-weight: bold;
+}
+
+h2{
+    margin: 20px;
+}
+
+hr{
+    margin: auto;
+}
+
+.salesTag{
+    background-color: gold;
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(101, 18, 173);
+    border-radius: 3px;
+}
+
+.supportTag{
+    background-color: rgb(101, 18, 173);;
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+}
+
+.viewButton{
+    color: rgb(101, 18, 173);
+}
+
+.data-entry{
+    width: 75%;
+}
