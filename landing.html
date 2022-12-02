@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="landing-page.css">
-    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script type="text/javascript" src="landing-script.js"></script>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin CRM</title>
@@ -11,11 +14,16 @@
     <div class="branding">
         <p>Dolphin CRM</p>
     </div>
+
     <h1>Login</h1>
-    <form action="" name="login">
-        <input placeholder="Email address" type="email">
-        <input placeholder ="Password" type="password">
-        <button>Login</button>
+    <form method="post" action="login.php" name="login" id="login">
+        <input placeholder="Email address" type="email" id="emailAdd">
+        <span class="error_form" id="emailErr"></span>
+
+        <input placeholder ="Password" type="password" id="password">
+        <span class="error_form" id="passwordErr"></span>
+
+        <button id="loginBtn" type="submit">Login</button>
     </form>
     <hr>
     <p class="copyright">Copyright &copy; 2022 Dolphin CRM</p>
