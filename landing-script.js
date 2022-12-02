@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document ).ready(function () {
 
     console.log('page ready');
 
@@ -34,7 +34,7 @@ $( document ).ready(function() {
     function check_pass() {
         var password_length= $("input[type='password']").val().length;
         if (password_length < 8) {
-            $("#passwordErr").html("Wrong");
+            $("#passwordErr").html("Too short");
             $("#passwordErr").show();
             $("input[type='password']").css("border", "2px solid #F90A0A");
             error_password = true;
@@ -50,19 +50,24 @@ $( document ).ready(function() {
         var password = $("input[type='password']").val();
         console.log(email, password);
 
-        if (email == "" || password == "")
+        if (email == "" || password == "") {
             alert('Enter credentials');
+        }
+            
         else {
             $.ajax ({
-                method: 'POST',
                 url: 'login.php',
+                method: 'POST',
                 data: {
                     login: 1,
                     emailPHP: email,
                     passwordPHP: password
                 },
                 success: function (response) {
-                    console.log(response);
+                    $("#response").text(response);
+
+                    if (response.indexOf('success') >= 0)
+                    window.location = 'user-creation.html';
                 },
                 dataType: 'text'
             });
