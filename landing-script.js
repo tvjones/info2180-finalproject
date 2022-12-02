@@ -8,52 +8,50 @@ $( document ).ready(function () {
     var error_email = false;
     var error_password = false;
 
-    $("input[type='email']").focusout(function() {
+    $("#emailAdd").focusout(function() {
         check_email();
     })
 
-    $("input[type='password']").focusout(function() {
+    $("#password").focusout(function() {
         check_pass();
     })
 
     function check_email() {
-        var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        var email = $("input[type='email']").val();
+        var pattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/;
+        var email = $("#emailAdd").val();
 
         if (pattern.test(email) && email !== '') {
             $("#emailErr").hide();
-            $("input[type='email']").css("border", "2px solid #34F458");
+            $("#emailAdd").css("border", "2px solid #34F458");
         } else {
             $("#emailErr").html("Invalid Email");
             $("#emailErr").show();
-            $("input[type='email']").css("border", "2px solid #F90A0A");
+            $("#emailAdd").css("border", "2px solid #F90A0A");
             error_email = true;        
         }
     }
 
     function check_pass() {
-        var password_length= $("input[type='password']").val().length;
+        var password_length= $("#password").val().length;
         if (password_length < 8) {
             $("#passwordErr").html("Too short");
             $("#passwordErr").show();
-            $("input[type='password']").css("border", "2px solid #F90A0A");
+            $("#password").css("border", "2px solid #F90A0A");
             error_password = true;
 
         } else {
             $("#passwordErr").hide();
-            $("input[type='password']").css("border", "2px solid #34F458");      
+            $("#password").css("border", "2px solid #34F458");      
         }
     }
 
     $("#loginBtn").click(function() {
-        var email = $("input[type='email']").val();
-        var password = $("input[type='password']").val();
+        let email = $("#emailAdd").val().trim();
+        let password = $("#password").val().trim();
         console.log(email, password);
 
-        if (email == "" || password == "") {
-            alert('Enter credentials');
-        }
-            
+        if (email == "" || password == "") 
+            alert('Enter Credentials');   
         else {
             $.ajax ({
                 url: 'login.php',
@@ -68,6 +66,10 @@ $( document ).ready(function () {
 
                     if (response.indexOf('success') >= 0)
                     window.location = 'user-creation.html';
+                },
+                fail: function (response) {
+                    if (response.indexOf('fail') >= 0)
+                    window.location = 'landing.html';
                 },
                 dataType: 'text'
             });

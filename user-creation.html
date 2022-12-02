@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dolphin CRM</title>
     <link rel="stylesheet" href="user-creation.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script src="user-creation-js.js"></script>
   </head>
   <body>
@@ -18,35 +19,35 @@
         <p>New Contact</p>
         <p>Users</p>
         <hr />
-        <p>Logout</p>
+        <button id="logoutBtn"><p>Logout</p></button>
       </aside>
       <div class="data-entry">
         <h1>New User</h1>
         <form action="" name="add-user">
           <div class="input-item">
             <label for="fname">First Name</label>
-            <input type="text" placeholder="Jane" name="fname">
+            <input type="text" placeholder="Jane" name="fname" id="fname">
           </div>
           <div class="input-item">
             <label for="lname">Last Name</label>
-            <input type="text" placeholder="Doe" name="lname">
+            <input type="text" placeholder="Doe" name="lname" id="lname">
           </div>
           <div class="input-item">
             <label for="email">Email</label>
-            <input type="email" placeholder="something@example.com" name="email">
+            <input type="email" placeholder="something@example.com" name="email" id="emailAdd">
           </div>
           <div class="input-item">
             <label for="password">Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" id="password">
           </div>
           <div class="input-item">
             <label for="role">Role</label>
-            <select name="role" id="">
+            <select name="role" id="selectOpt">
                 <option value="Member">Member</option>
             </select>
           </div>
           <div class="input-item">
-            <button>Save</button>
+            <button id="saveBtn">Save</button>
           </div>
         </form>
       </div>
