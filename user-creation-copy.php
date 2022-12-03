@@ -1,5 +1,10 @@
+<?php
+  session_start();
 
-
+  if (!isset($_SESSION['token'])) {
+    header('Location: landing-copy.html');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +14,7 @@
     <title>Dolphin CRM</title>
     <link rel="stylesheet" href="user-creation.css" />
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="user-creation-js.js"></script>
+    <script src="user-creation-js-copy.js"></script>
   </head>
   <body>
     <div class="branding">
@@ -25,22 +30,26 @@
       </aside>
       <div class="data-entry">
         <h1>New User</h1>
-        <form action="" name="add-user">
+        <form action="" name="add-user" id="loginform">
           <div class="input-item">
             <label for="fname">First Name</label>
             <input type="text" placeholder="Jane" name="fname" id="fname">
+            <span class="error_form" id="fnameError"></span>
           </div>
           <div class="input-item">
             <label for="lname">Last Name</label>
             <input type="text" placeholder="Doe" name="lname" id="lname">
+            <span class="error_form" id="lnameError"></span>
           </div>
           <div class="input-item">
             <label for="email">Email</label>
-            <input type="email" placeholder="something@example.com" name="email" id="emailAdd">
+            <input type="email" placeholder="something@example.com" name="email" id="email">
+            <span class="error_form" id="emailError"></span>
           </div>
           <div class="input-item">
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
+            <span class="error_form" id="passwordError"></span>
           </div>
           <div class="input-item">
             <label for="role">Role</label>

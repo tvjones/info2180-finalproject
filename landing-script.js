@@ -23,11 +23,14 @@ $( document ).ready(function () {
         if (pattern.test(email) && email !== '') {
             $("#emailErr").hide();
             $("#emailAdd").css("border", "2px solid #34F458");
-        } else {
+            return true;
+        } 
+        else {
             $("#emailErr").html("Invalid Email");
             $("#emailErr").show();
             $("#emailAdd").css("border", "2px solid #F90A0A");
-            error_email = true;        
+            error_email = true;
+            return false;        
         }
     }
 
@@ -38,21 +41,28 @@ $( document ).ready(function () {
             $("#passwordErr").show();
             $("#password").css("border", "2px solid #F90A0A");
             error_password = true;
+            return false;
+        }
 
-        } else {
+        if (password == "")
+            alert('Password Empty');
+
+        else {
             $("#passwordErr").hide();
-            $("#password").css("border", "2px solid #34F458");      
+            $("#password").css("border", "2px solid #34F458");
+            return true;     
         }
     }
 
-    $("#loginBtn").click(function() {
-        let email = $("#emailAdd").val().trim();
-        let password = $("#password").val().trim();
-        console.log(email, password);
+    $("#loginBtn").click(function(e) {
+        e.preventDefault();
+        
+        if (check_email && check_pass) {
 
-        if (email == "" || password == "") 
-            alert('Enter Credentials');   
-        else {
+            var email = $("#emailAdd").val().trim();
+            var password = $("#password").val().trim();
+            console.log(email, password);
+
             $.ajax ({
                 url: 'login.php',
                 method: 'POST',
@@ -61,18 +71,22 @@ $( document ).ready(function () {
                     emailPHP: email,
                     passwordPHP: password
                 },
+                dataType: 'text',
                 success: function (response) {
                     $("#response").text(response);
 
                     if (response.indexOf('success') >= 0)
                     window.location = 'user-creation.html';
-                },
-                fail: function (response) {
-                    if (response.indexOf('fail') >= 0)
-                    window.location = 'landing.html';
-                },
-                dataType: 'text'
-            });
+                }
+        }
+        // else {
+        // alert("Please enter valid credentials");
+        //         fail: function (response) {
+        //             if (response.indexOf('fail') >= 0)
+        //             window.location = 'landing.html';
+        //         }
+        //     }
+        );
         }
 
     });

@@ -1,12 +1,16 @@
 $( document ).ready(function () {
 
     $("#saveBtn").click(function() {
-        var fname = $("#fname").val().trim();
-        var lname = $("#lname").val().trim();
-        var email = $("emailAdd").val().trim();
-        var password = $("password").val().trim();
+        var fname = $("#fname").val();
+        var lname = $("#lname").val();
+        var email = $("emailAdd").val();
+        var password = $("password").val();
 
-        // if (())
+        //alert("clicked");
+
+        if ($(fname)=='' || $(lname)== '' || $(email)=='' || $(password)=='') {
+            alert("Missing Field");
+        }
     })
 
     $("#logoutBtn").click(function() {

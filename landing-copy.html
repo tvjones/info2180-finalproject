@@ -16,18 +16,15 @@
     </div>
 
     <h1>Login</h1>
-    <form method="post" action="login.php" name="login" id="login">
+    <form method="post" action="login-copy.php" name="login" id="loginform">
+        <div id="error" class="formerror"></div>
         <input placeholder="Email address" type="email" id="emailAdd">
-        <span class="error_form" id="emailErr"></span>
-
+        
         <input placeholder ="Password" type="password" id="password">
-        <span class="error_form" id="passwordErr"></span>
 
         <button id="loginBtn" type="submit">Login</button>
     </form>
 
-    <p id="response"></p>
-    <br>
     <hr>
     <p class="copyright">Copyright &copy; 2022 Dolphin CRM</p>
 </body>
