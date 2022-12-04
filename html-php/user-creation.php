@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_SESSION['token'])) {
-    header('Location: landing-copy.html');
+    header('Location: ../landing.html');
 }
 ?>
 <!DOCTYPE html>

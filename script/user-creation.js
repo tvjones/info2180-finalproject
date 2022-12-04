@@ -6,7 +6,7 @@ $( document ).ready(function () {
     $("#passwordError").hide();
 
 
-    let $error = $('#errorDiv').val();
+    let $error = $('#errorDiv');
     let firstname = $('#fname').val();
     let lastname = $('#lname').val();
     let email = $('#email').val();
@@ -41,7 +41,7 @@ $( document ).ready(function () {
 
 
     function isEmpty(elementValue) {
-        if (elementValue.length == 0) {
+        if (elementValue == '') {
             console.log ('Field is Empty');
             return true;
         }
@@ -185,7 +185,8 @@ $( document ).ready(function () {
 
     $("#saveBtn").click(function(e) {
         e.preventDefault();
-        console.log(firstname);
+        console.log('Clicked');
+
 
 
     })
@@ -196,7 +197,7 @@ $( document ).ready(function () {
             url: '../php/logout.php',
             method: 'POST',
             success: function (response) {
-                window.location = 'landing-copy.html';
+                window.location = '../landing.html';
             }
 
         });
