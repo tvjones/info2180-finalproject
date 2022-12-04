@@ -9,6 +9,7 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script type="text/javascript" src="../script/dashboard.js"></script>
+    <script type="text/javascript" src="../script/view-details-script.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,7 +69,7 @@
                   <td>Maria Anders</td>
                   <td>Germany</td>
                   <td><div class="salesTag">SALES LEAD</div></td>
-                  <td class="viewButton">View</td>
+                  <td class="viewButton"><button id="viewDetailsBtn" type="button">View</button></td>
                 </tr>
                 <tr>
                   <td class="tableName">Centro comercial Moctezuma</td>
