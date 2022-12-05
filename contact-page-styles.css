@@ -1,0 +1,129 @@
+#dashboard-contact-panel{
+    width: 100%;
+}
+
+.dashHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#addContactButton{
+    display: flex;
+    background-color: rgb(101, 18, 173);
+    box-sizing: border-box;
+    height: 30px;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 3px;
+    color: white;
+
+    margin-top: 20px;
+}
+
+#viewDetailsBtn {
+    display: flex;
+    background-color: rgb(0, 150, 255);
+    box-sizing: border-box;
+    height: 30px;
+    align-items: center;
+    padding: 0px 20px;
+    border-radius: 20px;
+    color: white;
+    /*outline: none;*/
+    border: 0;
+    /*margin-top: 20px;*/
+}
+
+.tableContainer{
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.filterRow{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filterRow > span{
+    padding: 0 10px;
+}
+
+.filterRow > .selected{
+    color: rgb(101, 18, 173);
+    text-decoration: underline;
+}
+
+.contactsTable{
+    background-color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(223, 231, 237);
+    border-radius: 5px;
+    border-spacing: 0;
+}
+
+th, td{
+    padding: 5px 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(223, 231, 237);
+}
+
+th{
+    background-color: #b8c2d1;
+}
+
+td{
+    color: grey;
+}
+
+.tableName{
+    color: black;
+    font-weight: bold;
+}
+
+h2{
+    margin: 20px;
+    font-size: 2em;
+}
+
+hr{
+    margin: auto;
+}
+
+.salesTag{
+    background-color: gold;
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(101, 18, 173);
+    border-radius: 3px;
+}
+
+.supportTag{
+    background-color: rgb(101, 18, 173);;
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+}
+
+.viewButton{
+    color: rgb(101, 18, 173);
+}
+
+.data-entry{
+    width: 100%;
+}

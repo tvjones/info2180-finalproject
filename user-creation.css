@@ -1,64 +1,37 @@
-*{
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#user-creation-panel{
+    width: 100%;
 }
 
-
-div.branding{
-    background-color: #1f2937;
-    color: white;
-    padding: 25px;
-}
-
-body{
-    background-color: #f3f4f6;
-    overflow-y: hidden;
-}
-
-aside{
-    background-color: white;
-    width: 15%;
-    height: 100vh;
-}
-
-aside p{
-    font-weight: bold;
-    font-size: 20px;
-    padding: 20px;
-    cursor: pointer;
-    width: fit-content;
-}
-
-hr{
-    width: 90%;
-}
-
-main{
+.userCreationHeader{
     display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-div.input-item > label{
-    font-weight: bold;
+
+.formContainer{
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
 }
-
-
 
 form[name="add-user"]{
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 4;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     gap: 20px;
     background-color: white;
-    width: 75%;
-    margin: auto;
-    padding: 50px;
+    width: 100%;
+    /*margin: auto;*/
+    /*padding: 50px;*/
     box-sizing: border-box;
 }
 
-h1{
-    width: 70%;
-    margin: auto;
-    padding: 30px 0;
+h2{
+    margin: 20px;
+    font-size: 2em;
 }
 
 div.input-item{
@@ -101,7 +74,14 @@ div.input-item:nth-of-type(4){
 
 .input-item > button{
     background-color: #4f46e5;
+    box-sizing: border-box;
+    height: 30px;
+    align-items: center;
+    padding: 0 50px 0 20px;
+    border-radius: 3px;
     color: white;
+    border: 0;
+
 }
 
 hr{
@@ -130,5 +110,5 @@ div.input-item > input{
 }
 */
 .data-entry{
-    width: 75%;
+    width: 100%;
 }
