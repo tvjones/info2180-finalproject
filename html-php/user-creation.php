@@ -13,7 +13,7 @@ if (!isset($_SESSION['token'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dolphin CRM</title>
-        <link rel="stylesheet" href="user-creation.css" />
+        <link rel="stylesheet" href="../user-creation.css" />
         <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
         <script src="../script/user-creation.js"></script>
     </head>
@@ -27,12 +27,12 @@ if (!isset($_SESSION['token'])) {
                 <p>New Contact</p>
                 <p>Users</p>
                 <hr />
-                <button id="logoutBtn"><p>Logout</p></button>
+                <p id="logoutBtn"><p>Logout</p>
             </aside>
             <div class="data-entry">
                 <h1>New User</h1>
                 <!--          add the php file to process the data similar to the logout.php in action below e.g. action="create-user.php"-->
-                <form action="" name="add-user" id="loginform">
+                <form action="../php/newUser-dB.php" name="add-user" id="add-user" method="post">
                     <div class="input-item">
                         <label for="fname">First Name</label>
                         <input type="text" placeholder="Jane" name="fname" id="fname">
@@ -62,6 +62,7 @@ if (!isset($_SESSION['token'])) {
                     <div class="input-item">
                         <button id="saveBtn" type="submit">Save</button>
                     </div>
+                    <div id="result"></div>
                 </form>
             </div>
         </main>
