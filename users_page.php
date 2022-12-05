@@ -13,7 +13,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Dolphin CRM</title>
-      <link rel="stylesheet" href="/info2180-project2/users_page.css" />
+      <link rel="stylesheet" href="./users_page.css" />
   </head>
   <body>
     <div id = "dashboard-user-panel">

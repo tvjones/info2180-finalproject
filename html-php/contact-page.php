@@ -4,6 +4,8 @@
         header('Location: ../landing.html');
     }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +48,7 @@
                         if ($connection -> connect_error){
                             die("Connection Failed: ". $connection -> connect_error);
                         }
-                        $sql = "SELECT title, firstname, lastname, email, company, user_type from Contacts ";
+                        $sql = "SELECT id, title, firstname, lastname, email, company, user_type from Contacts ";
                         $result = $connection -> query($sql);
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
@@ -55,7 +57,7 @@
                                         <td>" . $row["email"] . "</td>
                                         <td>" . $row["company"]. "</td>
                                         <td><div class='supportTag'>" . $row["user_type"] . "</div></td>
-                                        <td class='viewButton'><button id='viewDetailsBtn' type='button'>View</button></td>
+                                        <td><a href='../html-php/contact-details.php?id=" . $row["id"] . "'>View</a></td>
                                        </tr>";
                             }
                             echo "</table>";
