@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION['token'])) {
     header('Location: ../landing.html');
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
